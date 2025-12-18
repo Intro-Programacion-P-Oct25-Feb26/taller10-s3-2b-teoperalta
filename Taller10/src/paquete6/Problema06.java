@@ -30,7 +30,6 @@ public class Problema06 {
             }
         }
 
-        // Cálculo de la matriz resultante
         for (int fila = 0; fila < matriz.length; fila++) {
             for (int columna = 0; columna < matriz[fila].length; columna++) {
                 matrizResultante[fila][columna] = matriz[fila][columna] * valor;
