@@ -10,11 +10,38 @@ package paquete1;
  */
 public class Problema01 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // Datos iniciales
+        boolean[][] asistencia = {
+            {true, true, false, true, true},
+            {true, false, false, true, false},
+            {true, true, true, true, true},
+            {false, true, true, false, true}
+        };
+
+        String[] estudiantes = {"Ana", "Luis", "Carlos", "María"};
+        int[] totalAsistencias = new int[estudiantes.length];
+
+        String mensaje = "--- REPORTE FINAL DE ASISTENCIA ---\n";
+
+        for (int fila = 0; fila < asistencia.length; fila++) {
+            int contador = 0;
+            for (int columna = 0; columna < asistencia[fila].length; columna++) {
+                if (asistencia[fila][columna]) {
+                    contador++;
+                }
+            }
+            totalAsistencias[fila] = contador;
+
+            mensaje = mensaje + "Estudiante: " + estudiantes[fila]
+                    + " | Asistencias: " + totalAsistencias[fila];
+
+            if (totalAsistencias[fila] == 5) {
+                mensaje += " ASISTENCIA COMPLETA\n";
+            } else {
+                mensaje += " ASISTENCIA INCOMPLETA\n";
+            }
+        }
+        System.out.println(mensaje);
     }
-    
 }
