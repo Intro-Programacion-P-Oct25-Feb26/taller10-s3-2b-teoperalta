@@ -11,7 +11,7 @@ package paquete1;
 public class Problema01 {
 
     public static void main(String[] args) {
-        // Datos iniciales
+     
         boolean[][] asistencia = {
             {true, true, false, true, true},
             {true, false, false, true, false},
@@ -37,9 +37,9 @@ public class Problema01 {
                     + " | Asistencias: " + totalAsistencias[fila];
 
             if (totalAsistencias[fila] == 5) {
-                mensaje += " ASISTENCIA COMPLETA\n";
+                mensaje = mensaje + " ASISTENCIA COMPLETA\n";
             } else {
-                mensaje += " ASISTENCIA INCOMPLETA\n";
+                mensaje = mensaje + " ASISTENCIA INCOMPLETA\n";
             }
         }
         System.out.println(mensaje);
